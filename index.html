@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="ISHITVA KISHORE's portfolio featuring coding, web development, cybersecurity learning, table tennis, and personal apps.">
+  <title>ISHITVA KISHORE | Profile</title>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --card-hover: #263449;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent2: #818cf8;
+      --border: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, #172554, transparent 35%),
+        radial-gradient(circle at bottom right, #312e81, transparent 35%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 15px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 25px 60px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 30px;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 7vw, 72px);
+      line-height: 0.95;
+      margin-bottom: 18px;
+      overflow-wrap: anywhere;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero h2 {
+      font-size: 23px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 650px;
+    }
+
+    .profile-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0 4px;
+    }
+
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+
+    button,
+    .button {
+      border: none;
+      cursor: pointer;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s;
+      font-size: 14px;
+    }
+
+    .primary {
+      background: var(--accent);
+      color: #082f49;
+    }
+
+    .secondary {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    button:hover,
+    .button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    .skill:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .profile-card {
+      background: linear-gradient(145deg, #1e293b, #111827);
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 35px;
+      text-align: center;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+    }
+
+    .avatar {
+      width: 145px;
+      height: 145px;
+      margin: auto auto 20px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 52px;
+      font-weight: bold;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2),
+                  0 0 24px rgba(129, 140, 248, 0.25);
+    }
+
+    .public-pill {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: #2563eb;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .profile-card h3 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .pronouns {
+      color: var(--accent) !important;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .skill {
+      background: rgba(30, 41, 59, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 25px;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .skill:hover {
+      transform: translateY(-6px);
+      background: var(--card-hover);
+      border-color: var(--accent);
+    }
+
+    .skill-icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .skill h3 {
+      margin-bottom: 8px;
+    }
+
+    .skill p {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .skill-details {
+      margin-top: 25px;
+      padding: 22px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 16px;
+      display: none;
+    }
+
+    .skill-details.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* TECHNOLOGIES */
+
+    .tech-list {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tech {
+      padding: 12px 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      transition: 0.2s;
+    }
+
+    .tech:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    /* STATS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .stat {
+      text-align: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 40px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: var(--muted);
+    }
+
+    /* BADGES */
+
+    .badges-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .award {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: 0.25s;
+    }
+
+    .award:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+    }
+
+    .award-banner {
+      height: 110px;
+      display: grid;
+      place-items: center;
+      font-size: 42px;
+    }
+
+    .award-banner.dom {
+      background: #f5e6c8;
+    }
+
+    .award-banner.nvidia {
+      background: #ddd6fe;
+    }
+
+    .award-banner.chrome {
+      background: #d1fae5;
+    }
+
+    .award-body {
+      padding: 16px 18px 20px;
+    }
+
+    .award-body h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .award-body p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* MY APPS */
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .app-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 235px;
+      padding: 28px;
+      background: linear-gradient(145deg, rgba(30, 41, 59, 0.98), rgba(17, 24, 39, 0.98));
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      text-decoration: none;
+      color: var(--text);
+      overflow: hidden;
+      transition: transform 0.25s ease,
+                  border-color 0.25s ease,
+                  box-shadow 0.25s ease,
+                  background 0.25s ease;
+    }
+
+    .app-card::before {
+      content: "";
+      position: absolute;
+      top: -55px;
+      right: -55px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.08);
+      transition: transform 0.3s ease;
+      pointer-events: none;
+    }
+
+    .app-card:hover {
+      transform: translateY(-7px);
+      background: var(--card-hover);
+      border-color: var(--accent);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .app-card:hover::before {
+      transform: scale(1.5);
+    }
+
+    .app-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      font-size: 30px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 16px;
+      margin-bottom: 20px;
+    }
+
+    .app-card h3 {
+      font-size: 21px;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      overflow-wrap: anywhere;
+    }
+
+    .app-card p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .app-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--accent);
+      font-weight: bold;
+      margin-top: auto;
+    }
+
+    .app-card:hover .app-link {
+      color: #7dd3fc;
+    }
+
+    /* ABOUT */
+
+    .contact {
+      text-align: center;
+      background: linear-gradient(
+        135deg,
+        rgba(56, 189, 248, 0.12),
+        rgba(129, 140, 248, 0.12)
+      );
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 45px 25px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .public-name {
+      margin-top: 10px;
+      color: var(--text);
+    }
+
+    #message {
+      margin-top: 15px;
+      color: var(--accent);
+      min-height: 20px;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 900px) {
+      nav {
+        padding: 15px 4%;
+      }
+
+      nav ul {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        gap: 28px;
+      }
+
+      .profile-card {
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 750px) {
+      nav {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 60px;
+      }
+
+      .hero p {
+        margin: auto;
+      }
+
+      .buttons,
+      .profile-meta {
+        justify-content: center;
+      }
+
+      .skills-grid,
+      .badges-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      nav .logo {
+        font-size: 22px;
+      }
+
+      nav ul {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .skills-grid,
+      .badges-grid,
+      .apps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .hero h2 {
+        font-size: 19px;
+      }
+
+      .section-title h2 {
+        font-size: 31px;
+      }
+
+      .app-card {
+        min-height: 215px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">&lt;ISHITVA/&gt;</div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#tech">Tech</a></li>
+      <li><a href="#apps">My Apps</a></li>
+      <li><a href="#badges">Badges</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <main id="home" class="hero">
+
+    <div>
+      <span class="badge">CLASS 7 • STUDENT • CREATOR • PUBLIC PROFILE</span>
+
+      <h1>
+        Hi, I'm
+        <span class="gradient-text">ISHITVA KISHORE</span>
+      </h1>
+
+      <h2>Coder • Cybersecurity Learner • Table Tennis Player</h2>
+
+      <div class="profile-meta">
+        <span class="meta-chip">He/Him</span>
+        <span class="meta-chip">🏫 St Michael High School, Patna</span>
+        <span class="meta-chip">📍 Patna, Bihar, India</span>
+        <span class="meta-chip">पटना, बिहार, भारत</span>
+      </div>
+
+      <p>
+        I enjoy coding, exploring cybersecurity fundamentals,
+        building web projects, and improving my table tennis game.
+        I'm always learning something new and turning ideas into projects.
+      </p>
+
+      <div class="buttons">
+        <a href="#skills" class="button primary">Explore My Skills</a>
+        <a href="#apps" class="button secondary">Explore My Apps 🚀</a>
+        <button class="secondary" id="helloBtn" type="button">
+          Say Hello 👋
+        </button>
+      </div>
+
+      <div id="message" role="status" aria-live="polite"></div>
+    </div>
+
+    <div class="profile-card">
+      <span class="public-pill">Public profile</span>
+      <div class="avatar">IK</div>
+
+      <h3>ISHITVA KISHORE</h3>
+      <p class="pronouns">(He/Him)</p>
+
+      <p>Student at St Michael High School, Patna</p>
+
+      <br>
+
+      <p>Student &amp; Developer</p>
+
+      <br>
+
+      <p>
+        💻 Coding<br>
+        🔐 Cybersecurity<br>
+        🏓 Table Tennis
+      </p>
+
+      <br>
+
+      <p>📍 पटना, बिहार, भारत</p>
+    </div>
+
+  </main>
+
+  <!-- SKILLS -->
+  <section id="skills">
+
+    <div class="section-title">
+      <h2>My Skills</h2>
+      <p>Click a skill to learn more.</p>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill" data-skill="programming" role="button" tabindex="0">
+        <div class="skill-icon">💻</div>
+        <h3>Programming</h3>
+        <p>Java • JavaScript • C++</p>
+      </div>
+
+      <div class="skill" data-skill="web" role="button" tabindex="0">
+        <div class="skill-icon">🌐</div>
+        <h3>Web Development</h3>
+        <p>HTML • CSS • JavaScript • TypeScript</p>
+      </div>
+
+      <div class="skill" data-skill="cyber" role="button" tabindex="0">
+        <div class="skill-icon">🔐</div>
+        <h3>Cybersecurity</h3>
+        <p>Security fundamentals &amp; ethical learning</p>
+      </div>
+
+      <div class="skill" data-skill="tabletennis" role="button" tabindex="0">
+        <div class="skill-icon">🏓</div>
+        <h3>Table Tennis</h3>
+        <p>Defense • Offense • Technique</p>
+      </div>
+
+      <div class="skill" data-skill="problem" role="button" tabindex="0">
+        <div class="skill-icon">🧠</div>
+        <h3>Problem Solving</h3>
+        <p>Logic • Analysis • Experimentation</p>
+      </div>
+
+      <div class="skill" data-skill="learning" role="button" tabindex="0">
+        <div class="skill-icon">🚀</div>
+        <h3>Learning</h3>
+        <p>Curiosity • Practice • Projects</p>
+      </div>
+
+    </div>
+
+    <div class="skill-details" id="skillDetails" aria-live="polite">
+      <h3 id="detailTitle"></h3>
+      <p id="detailText"></p>
+    </div>
+
+  </section>
+
+  <!-- TECHNOLOGIES -->
+  <section id="tech">
+
+    <div class="section-title">
+      <h2>Technologies I Use</h2>
+      <p>Languages and technologies I'm learning.</p>
+    </div>
+
+    <div class="tech-list">
+      <span class="tech">☕ Java</span>
+      <span class="tech">🟨 JavaScript</span>
+      <span class="tech">🔷 TypeScript</span>
+      <span class="tech">⚡ C++</span>
+      <span class="tech">🌐 HTML</span>
+      <span class="tech">🎨 CSS</span>
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+  <section>
+
+    <div class="section-title">
+      <h2>Quick Profile</h2>
+    </div>
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>6+</strong>
+        <span>Programming Technologies</span>
+      </div>
+
+      <div class="stat">
+        <strong>2</strong>
+        <span>Main Passions</span>
+      </div>
+
+      <div class="stat">
+        <strong>∞</strong>
+        <span>Things Left to Learn</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MY APPS -->
+  <section id="apps">
+
+    <div class="section-title">
+      <h2>My Apps 🚀</h2>
+      <p>Explore the apps and projects I've built.</p>
+    </div>
+
+    <div class="apps-grid">
+
+      <a
+        class="app-card"
+        href="https://yashkishorepower123-debug.github.io/SKYPULSE./"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open SKYPULSE app in a new tab"
+      >
+        <div class="app-icon">🌤️</div>
+        <h3>SKYPULSE</h3>
+        <p>Explore my SkyPulse project.</p>
+        <span class="app-link">Open App ↗</span>
+      </a>
+
+      <a
+        class="app-card"
+        href="https://yashkishorepower123-debug.github.io/Ai-writer/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open AI Writer app in a new tab"
+      >
+        <div class="app-icon">✍️</div>
+        <h3>AI Writer</h3>
+        <p>Explore my AI writing project.</p>
+        <span class="app-link">Open App ↗</span>
+      </a>
+
+      <a
+        class="app-card"
+        href="https://yashkishorepower123-debug.github.io/CODENOVA-BY-YASH/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open CodeNova app in a new tab"
+      >
+        <div class="app-icon">💻</div>
+        <h3>CodeNova</h3>
+        <p>Explore my CodeNova project.</p>
+        <span class="app-link">Open App ↗</span>
+      </a>
+
+      <a
+        class="app-card"
+        href="https://yashkishorepower123-debug.github.io/password-strength-checker/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Password Strength Checker in a new tab"
+      >
+        <div class="app-icon">🔐</div>
+        <h3>Password Strength Checker</h3>
+        <p>Explore my password security tool.</p>
+        <span class="app-link">Open App ↗</span>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- BADGES -->
+  <section id="badges">
+
+    <div class="section-title">
+      <h2>Badges</h2>
+      <p>Achievements from my public developer profile.</p>
+    </div>
+
+    <div class="badges-grid">
+
+      <article class="award">
+        <div class="award-banner dom">🧩</div>
+        <div class="award-body">
+          <h3>DOM Detective</h3>
+          <p>Aug 8, 2026</p>
+        </div>
+      </article>
+
+      <article class="award">
+        <div class="award-banner nvidia">🟩</div>
+        <div class="award-body">
+          <h3>Google Cloud &amp; NVIDIA community member</h3>
+          <p>Aug 6, 2026</p>
+        </div>
+      </article>
+
+      <article class="award">
+        <div class="award-banner chrome">🧭</div>
+        <div class="award-body">
+          <h3>Chrome DevTools User</h3>
+          <p>Aug 6, 2026</p>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="contact">
+
+      <h2>Building. Learning. Improving.</h2>
+
+      <p style="margin-top: 12px;">
+        My goal is to keep improving my programming,
+        cybersecurity knowledge, and table tennis skills
+        while creating interesting projects along the way.
+      </p>
+
+      <p style="margin-top: 14px;">
+        Student at St Michael High School, Patna • He/Him • Public profile
+      </p>
+
+      <div class="buttons" style="justify-content: center;">
+        <a href="#home" class="button primary">Back to Top ↑</a>
+        <a href="#apps" class="button secondary">View My Apps 🚀</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year">2026</span> ISHITVA KISHORE • Built with HTML, CSS &amp; JavaScript</p>
+    <p class="public-name">Public name: Yash</p>
+  </footer>
+
+  <script>
+    // Interactive skill descriptions
+
+    const skillData = {
+      programming: {
+        title: "💻 Programming",
+        text:
+          "I work with Java, JavaScript and C++, focusing on programming fundamentals, logic and building projects."
+      },
+
+      web: {
+        title: "🌐 Web Development",
+        text:
+          "I create websites using HTML and CSS and add interactivity using JavaScript and TypeScript."
+      },
+
+      cyber: {
+        title: "🔐 Cybersecurity",
+        text:
+          "I'm learning cybersecurity fundamentals and ethical security concepts to understand how systems work and how they can be protected."
+      },
+
+      tabletennis: {
+        title: "🏓 Table Tennis",
+        text:
+          "Table tennis is one of my main interests. I enjoy defensive play while also using offensive opportunities and working on technique."
+      },
+
+      problem: {
+        title: "🧠 Problem Solving",
+        text:
+          "Coding and sports both help me develop logical thinking, decision-making and the ability to adapt."
+      },
+
+      learning: {
+        title: "🚀 Learning",
+        text:
+          "I enjoy experimenting with new technologies, practicing skills and turning ideas into projects."
+      }
+    };
+
+    const skillCards = document.querySelectorAll(".skill");
+    const detailBox = document.getElementById("skillDetails");
+    const detailTitle = document.getElementById("detailTitle");
+    const detailText = document.getElementById("detailText");
+
+    function showSkill(card) {
+      const skill = card.dataset.skill;
+      const data = skillData[skill];
+
+      if (!data) return;
+
+      detailTitle.textContent = data.title;
+      detailText.textContent = data.text;
+      detailBox.classList.add("show");
+    }
+
+    skillCards.forEach(card => {
+      card.addEventListener("click", () => {
+        showSkill(card);
+      });
+
+      // Keyboard accessibility
+      card.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          showSkill(card);
+        }
+      });
+    });
+
+    // Hello button
+
+    const helloButton = document.getElementById("helloBtn");
+    const message = document.getElementById("message");
+
+    helloButton.addEventListener("click", () => {
+      message.textContent =
+        "👋 Thanks for visiting my profile! Keep coding and keep learning. Bye!";
+    });
+
+    // Automatically update the footer year
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
